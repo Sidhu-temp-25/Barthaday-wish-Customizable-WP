@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Birthday</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="coststyle.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <!-- npx @tailwindcss/cli -i ./src/input.css -o ./dist/style.css --watch -->
+
+    <body class ="min-h-screen overflow-x-hidden relative">
+
+        <!-- Loading Screen -->
+        <!-- <div id="loading-screen" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white z-[9999]">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-pink-500 border-solid"></div>
+        </div> -->
+
+        <div id="flower-container" class="flower-container"></div>
+        <div id="confetti-container"></div>
+        
+        <header class="py-6 px-4 text-center relative z-10 flex flex-col items-center">
+            <h1 class="text-4xl md:text-6xl font-bold bg-clip-text text-pink-500 bg-gradient-to-r mb-4 pulse-animation z-50">🎉 Happy Birthday, <span id="recipientName"></span>! 🎉</h1>
+            <p id="wishMessage">
+            <p class="text-lg text-purple-800">Someone special is celebrating today!</p>
+            <div class="text-pink-800">
+                From <span id="signature">Your Name/Friend</span>
+            </div>
+
+            <!-- <script>
+                const audio = document.getElementById('myAudio');
+                audio.autoplay = true;
+                audio.loop = true;
+                audio.load(); // Needed to apply autoplay after setting
+                audio.muted = false;
+            </script> -->
+
+            <!-- <script
+                src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"
+                ></script>
+
+                <dotlottie-player
+                src="https://lottie.host/cb126d18-4f9a-4d08-a103-5a2b03718e2f/jTUR26HuXb.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 300px; height: 300px"
+                loop
+                autoplay
+                ></dotlottie-player> -->
+
+            <script
+                src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module">
+            </script>
+
+            <!-- <div class="animation"></div> -->
+            <dotlottie-player class="gift-box absolute top-0 "
+                src="img/Animation - 1751863108219.json"
+                background="transparent"
+                speed="0.5"
+                style="height: 500px;"
+                autoplay>
+            </dotlottie-player>
+                
+        </header>
+        
+        <main class="container mx-auto px-4 py-8 relative z-10 overflow-x-hidden hide">
+
+            <section class="flex flex-col md:flex-row items-center justify-center gap-12 mb-16">
+
+                <div class="blowWind absolute top-56 md:top-5 left-5 sm:left-20 md:left-24 lg:left-44 xl:left-72 flex items-center z-50 backdrop-blur-xl px-3 md:px-0 md:backdrop-blur-none rounded-2xl float-animation">
+                    <p class="font-medium sm:text-2xl text-purple-800">Blow Wind</p>
+                    <img class="wind_blow w-9 sm:w-12 md:w-16" src="img/wind-blow_12709748.png" alt="Wind blow">
+                </div>
+
+                <!-- From Uiverse.io by yaroslavas2001 --> 
+                <div class="floerwAnim md:w-[140px] lg:w-[192px]">
+                    <button class="btn relative right-20">
+                        <div class="wrapper">
+                            <div class="flowerr flower1">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower2">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower3">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower4">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower5">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower6">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="btn">
+                        <div class="wrapper">
+                            <div class="flowerr flower1">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower2">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower3">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower4">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower5">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower6">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="btn relative right-20">
+                        <div class="wrapper">
+
+                            <div class="flowerr flower1">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower2">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower3">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower4">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower5">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower6">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="btn">
+                        <div class="wrapper">
+
+                            <div class="flowerr flower1">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower2">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower3">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower4">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower5">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                            <div class="flowerr flower6">
+                                <div class="petal one"></div>
+                                <div class="petal two"></div>
+                                <div class="petal three"></div>
+                                <div class="petal four"></div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="birthday-cake w-80 h-80 relative float-animation flex flex-col items-center justifay-between">
+                    <div class="w-4 h-16 relative bottom-25 left-2.5 md:top-3 mb-5">
+                        <div class="candle-flame transform -translate-x-1/2 -translate-y-1/2"></div>
+                    </div>
+                    <img class="w-96 relative bottom-28 md:bottom-0 rounded-lg" src="img/Smita's Elegant Pink Cake Delight[2].png" alt="Birthday Cake">
+                </div>
+                
+                <div class="text-center md:text-left md:w-[350px] lg:w-[447px]">
+                    <h2 class="text-3xl font-bold text-purple-700 mb-4">Make a Wish!</h2>
+                    <p class="text-purple-800 mb-6">Today is your special day to shine! Blow out the candles and make your birthday wish come true.</p>
+                    <button id="wish-btn" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition hover:scale-105 relative bottom-180 left-[5rem] sm:left-[15rem] md:left-0 md:bottom-0">
+                        Blow Candles
+                    </button>
+                </div>
+            </section>
+
+            <section class="">
+                <audio class="myAudio" src="img/main_clip.mp3" loop>
+                </audio>
+            </section>
+            
+            <section class="flex flex-col items-center">
+                <h1 class="text-4xl bg-transparent font-bold text-purple-700 mb-6">Wishes</h1>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="message-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-700 mb-2">Special Gifts</h3>
+                        <p class="text-purple-600">Today is all about you! Enjoy your presents and the love from everyone around you.</p>
+                    </div>
+                    
+                    <div class="message-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-700 mb-2">Delicious Cake</h3>
+                        <p class="text-purple-600">Indulge in your favorite cake and treats. Calories don't count on birthdays!</p>
+                    </div>
+                    
+                    <div class="message-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-700 mb-2">Love & Joy</h3>
+                        <p class="text-purple-600">May your day be filled with happiness, laughter, and wonderful memories.</p>
+                    </div>
+                </div>
+                
+            </section>
+            <section class="flex md:flex-row flex-col items-center justify-center gap-12 mb-16">
+                <!-- From Uiverse.io by tako143 --> 
+                <div class="fflower">
+                    <div class="petall petal1"></div>
+                    <div class="petall petal2"></div>
+                    <div class="petall petal3"></div>
+                    <div class="petall petal4"></div>
+                    <div class="petall petal5"></div>
+                    <div class="petall petal6"></div>
+                    <div class="petall petal7"></div>
+                    <div class="petall petal8"></div>
+                    <div class="center"></div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto mb-16 text-center">
+                    <h2 class="text-2xl font-bold text-purple-700 mb-6">Celebration Countdown</h2>
+                    <div class="flex justify-center gap-4">
+                        <div class="bg-pink-100 rounded-lg p-4 w-20">
+                            <div id="hours" class="text-3xl font-bold text-pink-600">24</div>
+                            <div class="text-sm text-pink-800">Hours</div>
+                        </div>
+                        <div class="bg-pink-100 rounded-lg p-4 w-20">
+                            <div id="minutes" class="text-3xl font-bold text-pink-600">60</div>
+                            <div class="text-sm text-pink-800">Minutes</div>
+                        </div>
+                        <div class="bg-pink-100 rounded-lg p-4 w-20">
+                            <div id="seconds" class="text-3xl font-bold text-pink-600">60</div>
+                            <div class="text-sm text-pink-800">Seconds</div>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-purple-700">The party never stops on your birthday!</p>
+                </div>
+
+                <div class="fflower">
+                    <div class="petall petal1"></div>
+                    <div class="petall petal2"></div>
+                    <div class="petall petal3"></div>
+                    <div class="petall petal4"></div>
+                    <div class="petall petal5"></div>
+                    <div class="petall petal6"></div>
+                    <div class="petall petal7"></div>
+                    <div class="petall petal8"></div>
+                    <div class="center"></div>
+                </div>
+            </section>
+            
+            <section class="mb-16">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="restict relative max-w-64  flex flex-col justify-center overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="img/775800ba73b1ef37ac2ea31886d40aae.jpg" alt="">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                        </div>
+                    </div>
+                    <div class="restict relative max-w-64  overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img src="img/happy-birthday-birthday.gif" alt="">
+                    </div>
+                    <div class="restict restict1 max-w-64  relative flex flex-col justify-center overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <video src="img/https___ecards.hopespring.org.uk_ecards_birthday-video-ecard-13_(MP4).mp4" alt="" autoplay loop muted>
+                        </video>
+                        
+                    </div>
+                    <div class="restict restict2 max-w-64 overflow-hidden relative verflow-hidden height-auto rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <img class="h-[125%] w-[120%]" src="img/108bdf5824efcc6be60ea1d90f769d49.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="bg-purple-700 text-white py-8 px-4 relative z-10">
+            <div class="container mx-auto text-center">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-white hover:text-pink-200 text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-pink-200 text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-pink-200 text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-pink-200 text-2xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <p class="mb-4">Share your birthday joy with friends and family!</p>
+                <p class="text-pink-200">© 2025 Birthday Wishes | <i class="fas fa-star text-yellow-300"></i> Made by Sidhu </p>
+            </div> 
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
