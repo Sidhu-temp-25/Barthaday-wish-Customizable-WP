@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish Generator</title>
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+
+<!-- npx @tailwindcss/cli -i ./src/input.css -o ./dist/style.css --watch -->
+
+<body>
+    <div class="container pt-7">
+        <h1>Create a Personalized Birthday Wish Link!</h1>
+        <p>Enter the name of the birthday person:</p>
+        <input type="text" id="nameInput" placeholder="e.g., Alice" autocomplete="off">
+        <p>Enter your name:</p>
+        <input type="text" id="sendernameInput" placeholder="e.g., Your name" autocomplete="off">
+        <button id="generateLinkBtn">Generate Link</button>
+        <div id="linkOutput" class="link-output">
+            <p>Your personalized link:</p>
+            <input type="text" id="generatedLink" readonly>
+            <div class="btn flex ">
+                <button id="copyLinkBtn">Copy Link</button>
+                <button id="whatsappShareBtn" class="whatsapp-btn">
+                    WhatsApp
+                </button>
+            </div>
+        </div>
+        <p class="instructions">
+            Share this link with the birthday person for a special wish!
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
